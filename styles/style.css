@@ -91,3 +91,27 @@ h5 {
   text-align: center;
   padding: 10px;
 }
+
+.comment-image {
+  border-radius: 50%;
+}
+
+.chat-room {
+  width: 700px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.comment-list-entry {
+  font-size: 16px;
+  padding: 8px;
+}
+
+.comment-list-username {
+  font-weight: bold;
+}
+
+.comment {
+  font-size: 14px;
+  color: #999;
+}

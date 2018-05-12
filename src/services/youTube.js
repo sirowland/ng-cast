@@ -10,7 +10,18 @@ angular.module('video-player')
           embeddable: 'true',
           type: 'video'
         }
-      })
+      });
+    };
+
+    this.getComments = function(videoId) {
+      return $http.get( 'https://www.googleapis.com/youtube/v3/commentThreads', {
+        params: {
+          key: window.YOUTUBE_API_KEY,
+          maxResults: '5',
+          part: 'snippet',
+          videoId: videoId
+        }
+      });
     };
   });
 
