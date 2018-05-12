@@ -7,10 +7,12 @@ angular.module('video-player')
 
     template: `
     <div class="search-bar form-inline">
-      <input class="form-control" type="text" ng-model="$ctrl.input" />
-      <button class="btn" ng-click="$ctrl.searchResults($ctrl.input)">
-        <span class="glyphicon glyphicon-search"></span>
-      </button>
+      <form ng-submit="$ctrl.searchResults($ctrl.input)">
+        <input class="form-control" type="text" ng-model="$ctrl.input">
+        <button class="btn" ng-click="$ctrl.searchResults($ctrl.input)">
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
+      </form>
     </div>
     `
   });

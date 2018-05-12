@@ -9,7 +9,7 @@ angular.module('video-player')
     template: `
     <ul class="video-list">
       <video-list-entry 
-        ng-repeat="video in $ctrl.videos"
+        ng-repeat="video in $ctrl.videos track by $index"
         video="video"
         select-video="$ctrl.selectVideo"
         on-click="$ctrl.onClick"

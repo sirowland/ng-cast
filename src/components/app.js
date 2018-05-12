@@ -22,6 +22,7 @@ angular.module('video-player')
     </div>`,
 
     controller: function(youTube) {  
+    
       this.selectVideo = (video) => {
         this.currentVideo = video;
       };

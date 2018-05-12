@@ -19,11 +19,15 @@ angular.module('video-player')
   
     controller: function() {
       this.$onInit = function () {
-        this.url = 'https://www.youtube.com/embed/' + this.currentVideo.id.videoId;
+        if (this.currentVideo) {
+          this.url = 'https://www.youtube.com/embed/' + this.currentVideo.id.videoId;
+        }
       };
 
       this.$onChanges = function () {
-        this.url = 'https://www.youtube.com/embed/' + this.currentVideo.id.videoId;
+        if (this.currentVideo) {
+          this.url = 'https://www.youtube.com/embed/' + this.currentVideo.id.videoId;
+        }
       };        
     }
   });

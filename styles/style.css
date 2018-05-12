@@ -15,6 +15,7 @@ body {
 }
 
 .search-bar {
+  display: inline;
   border-radius: 1px;
   background: #fff;
 }
@@ -24,6 +25,7 @@ body {
   width: 80%
 }
 .search-bar .btn {
+  float: right;
   border-radius: 2px;
   border-color: #d3d3d3;
   background: #f8f8f8;
