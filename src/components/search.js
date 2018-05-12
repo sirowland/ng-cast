@@ -1,7 +1,7 @@
 angular.module('video-player')
 
-.component('search', {
-  template: `
+  .component('search', {
+    template: `
     <div class="search-bar form-inline">
       <input class="form-control" type="text" />
       <button class="btn">
@@ -10,7 +10,7 @@ angular.module('video-player')
     </div>
     `,
 
-  controller: function() {
-    this.result = function(){};
-  }
-});
+    controller: function() {
+      this.result = function() {};
+    }
+  });

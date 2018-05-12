@@ -1,11 +1,11 @@
 angular.module('video-player')
-.component('videoListEntry', {
-  bindings: {
-    video: '<',
-    selectVideo: '<'
-  },
+  .component('videoListEntry', {
+    bindings: {
+      video: '<',
+      selectVideo: '<'
+    },
 
-  template: `
+    template: `
     <li class="video-list-entry media">
       <div class="media-left">
         <img class="media-object" ng-src={{$ctrl.video.snippet.thumbnails.default.url}} />
@@ -16,6 +16,6 @@ angular.module('video-player')
       </div>
     </li>
   `
-});
+  });
 
 // $ctrl.selectVideo($ctrl.video)

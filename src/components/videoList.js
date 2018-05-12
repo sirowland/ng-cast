@@ -1,12 +1,12 @@
 angular.module('video-player')
 
-.component('videoList', {
-  bindings: {
-    videos: '<',
-    selectVideo: '<'
-  },
+  .component('videoList', {
+    bindings: {
+      videos: '<',
+      selectVideo: '<'
+    },
 
-  template:`
+    template: `
     <ul class="video-list">
       <video-list-entry 
         ng-repeat="video in $ctrl.videos"
@@ -16,4 +16,4 @@ angular.module('video-player')
       >
     </ul>
   `
-});
+  });

@@ -1,11 +1,11 @@
 angular.module('video-player')
 
-.component('videoPlayer', {
-  bindings: {
-    currentVideo: '<'
-  },
+  .component('videoPlayer', {
+    bindings: {
+      currentVideo: '<'
+    },
 
-  template: `
+    template: `
     <div class="video-player">
       <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item" src="{{$ctrl.url}}" allowFullScreen></iframe>
@@ -17,13 +17,13 @@ angular.module('video-player')
     </div>
   `,
   
-  controller: function(){
-    this.$onInit = function () {
-      this.url = "https://www.youtube.com/embed/" + this.currentVideo.id.videoId;
-    }
+    controller: function() {
+      this.$onInit = function () {
+        this.url = 'https://www.youtube.com/embed/' + this.currentVideo.id.videoId;
+      };
 
-    this.$onChanges = function () {
-      this.url = "https://www.youtube.com/embed/" + this.currentVideo.id.videoId;
-    }        
-  }
-});
+      this.$onChanges = function () {
+        this.url = 'https://www.youtube.com/embed/' + this.currentVideo.id.videoId;
+      };        
+    }
+  });

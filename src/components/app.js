@@ -1,7 +1,7 @@
 angular.module('video-player')
 
-.component('app', {
-  template: `
+  .component('app', {
+    template: `
     <div id="app container">
       <nav class="navbar">
         <div class="col-md-6 col-md-offset-3">
@@ -21,12 +21,14 @@ angular.module('video-player')
       <div>
     </div>`,
 
-  controller: function($scope) {  
-    this.selectVideo = (video) => {
-      this.currentVideo = video;
-    };
-    this.searchResults = function(){};
-    this.videos = window.exampleVideoData;
-    this.currentVideo = this.videos[0];
-  }
-});
+    controller: function($scope) {  
+      this.selectVideo = (video) => {
+        this.currentVideo = video;
+      };
+      this.searchResults = (videos) => {
+        this.videos = videos;
+      };
+      this.videos = window.exampleVideoData;
+      this.currentVideo = this.videos[0];
+    }
+  });
