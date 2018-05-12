@@ -7,7 +7,7 @@ angular.module('video-player')
     template: `
     <li class="video-list-entry media">
       <div class="media-body">
-        <div style="display: inline">
+        <div>
             <img class="comment-image" src="{{$ctrl.comment.snippet.topLevelComment.snippet.authorProfileImageUrl}}">
             <div class="comment-list-username">{{$ctrl.comment.snippet.topLevelComment.snippet.authorDisplayName}}</div>
         </div>
